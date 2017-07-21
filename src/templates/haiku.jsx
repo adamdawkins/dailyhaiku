@@ -1,11 +1,12 @@
 import React from 'react';
+import Haiku from '../components/Haiku';
 
 const HaikuTemplate = ({data: { haiku } }) => { 
 	return (
-		<div className="haiku">
-			<span className="date">{haiku.frontmatter.date}</span>
-			<div dangerouslySetInnerHTML={{ __html: haiku.html }} />
-		</div>
+		<Haiku
+			date={haiku.frontmatter.date}
+			html={haiku.html}
+		/>
 	);
 };
 
