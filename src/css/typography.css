@@ -624,19 +624,41 @@ pre tt:after {
 }
 
 .haiku {
+	 display: block;
+	 box-sizing: border-box;
 	 padding: 0 5vw;
-	 margin-top: 30vh;
-	 height: 33vh;
-}
-.haiku > p {
-	 font-family: "henriette",sans-serif;
-	 font-style: normal;
-	 font-weight: 500;
-	 font-size: 8vmin;
-	 line-height: 1.5;
-}
+	 padding-top: 33vh;
+	 height: 99vh;
+	 padding-bottom: 33vh;
+	 border-bottom: 1px dotted rgba(0,0,0, .5);
 
-.nbsp {
-			white-space: nowrap;
-}
+	 & .date {
+			color: rgba(0,0,0, .5);
+			font-family: "henriette",sans-serif;
+			font-style: normal;
+			font-weight: 400;
+	 }
 
+	 & p {
+			font-family: "henriette",sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 8vmin;
+			line-height: 1.5;
+	 }
+
+	 & a {
+			color: inherit;
+			text-decoration: none;
+			&:after {
+				 content: "*";
+				 font-size: .5em;
+				 vertical-align: super;
+				 color: red;
+			}
+
+			&:hover {
+				 color: red;
+			}
+	 }
+}
