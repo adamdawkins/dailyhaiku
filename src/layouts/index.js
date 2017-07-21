@@ -12,12 +12,12 @@ export default class Template extends React.Component {
 
   render() {
     return (
-      <div style={{ padding: '1vh 5vh' }}>
+      <div style={{ padding: '1vh 5vw' }}>
         <Helmet
           title="Adam's Daily Haiku"
         />
 				<div style={{fontFamily: 'henriette'}}>
-				<Link to='/'>
+				<Link to='/' className="logo">
 				Adam's Daily Haiku
 				</Link>
 				</div>

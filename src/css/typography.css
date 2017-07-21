@@ -626,7 +626,6 @@ pre tt:after {
 .haiku {
 	 display: block;
 	 box-sizing: border-box;
-	 padding: 0 5vw;
 	 padding-top: 33vh;
 	 height: 99vh;
 	 padding-bottom: 33vh;
@@ -660,5 +659,16 @@ pre tt:after {
 			&:hover {
 				 color: red;
 			}
+	 }
+}
+
+.logo {
+	 color: black;
+	 text-decoration: none;
+	 border-bottom: 1px solid black;
+	 font-size: 1.5rem;
+	 &:hover {
+			border-bottom: 1px solid red;
+			background: rgba(255,0,0, .1);
 	 }
 }
