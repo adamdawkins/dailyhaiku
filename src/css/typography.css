@@ -624,12 +624,11 @@ pre tt:after {
 }
 
 .haiku {
+	 position: relative;
 	 display: block;
 	 box-sizing: border-box;
 	 padding-top: 33vh;
-	 height: 99vh;
-	 padding-bottom: 33vh;
-	 border-bottom: 1px dotted rgba(0,0,0, .5);
+	 height: calc(66vh - 4rem);
 
 	 & .date {
 			color: rgba(0,0,0, .5);
