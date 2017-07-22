@@ -1,10 +1,9 @@
 import React from 'react';
-import Link from "gatsby-link"
 
 const Haiku = ({ path, date, html }) => { 
 	return (
 		<div className="haiku">
-			<Link to={path} className="date"> {date} </Link>
+			<span className="date"> {date} </span>
 			<div dangerouslySetInnerHTML={{ __html: html }} />
 		</div>
 	);
