@@ -11,6 +11,7 @@ export default class HTML extends React.Component {
 
   render() {
     let css
+		let tracking
     if (process.env.NODE_ENV === "production") {
       css = (
         <style
@@ -19,6 +20,13 @@ export default class HTML extends React.Component {
           }}
         />
       )
+			tracking = (
+				<div
+					dangerouslySetInnerHTML={{
+						__html: require("!raw!../public/static/clicky.html"),
+					}}
+				/>
+			)
     }
 
     return (
@@ -40,6 +48,7 @@ export default class HTML extends React.Component {
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
           {this.props.postBodyComponents}
+					{tracking}
         </body>
       </html>
     )
