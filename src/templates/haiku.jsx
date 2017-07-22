@@ -1,11 +1,19 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Haiku from '../components/Haiku';
+import Helmet from 'react-helmet';
 
 const HaikuTemplate = ({data: { haiku }, pathContext }) => { 
-	const { next, previous } = pathContext;
+	const { next, previous, path } = pathContext;
 	return (
 		<div>
+			<Helmet>
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:creator" content="@adamdawkins" />
+				<meta property="og:url" content={`https://adamshaikus.now.sh/${path}`} />
+				<meta property="og:title" content={`${haiku.frontmatter.date} - A haiku.`} />
+				<meta property="og:description" content={haiku.internal.content.split('---')[2].split('\n\n')[1]}/>
+			</Helmet>
 		<Haiku
 			id={haiku.frontmatter.id}
 			date={haiku.frontmatter.date}
@@ -35,8 +43,10 @@ export const pageQuery = graphql`
 			html
 			frontmatter {
 			 date(formatString:"Do MMMM, YYYY")
-
 			}
+internal {
+content
+}
 		}
 	}
 `
