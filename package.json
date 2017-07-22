@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "adams-haikus",
+  "description": "Adam's Daily Haikus",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Adam Dawkins <adam@dragondrop.uk>",
   "dependencies": {
     "gatsby": "^1.0.1",
     "gatsby-link": "^1.0.1",
@@ -12,9 +12,6 @@
     "gatsby-source-filesystem": "^1.0.1",
     "gatsby-transformer-remark": "^1.1.0",
     "react-typekit": "^1.1.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^0.12.0"
   },
   "keywords": [
     "gatsby"
