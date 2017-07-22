@@ -4,7 +4,7 @@
   "version": "1.0.0",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/adamdawkinsdailyhaiku/.git"
+		"url": "https://github.com/adamdawkins/dailyhaiku"
 	},
   "author": "Adam Dawkins <adam@dragondrop.uk>",
   "dependencies": {
