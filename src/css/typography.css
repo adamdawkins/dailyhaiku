@@ -644,10 +644,11 @@ a {
 
 .haiku {
 	 position: relative;
-	 display: block;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
 	 box-sizing: border-box;
-	 margin-top: 33vh;
-	 margin-bottom: 10vh;
+	 height: calc(100vh - 4rem - 2rem);
 
 	 & .date {
 			color: rgba(0,0,0, .8);
@@ -655,6 +656,7 @@ a {
 			font-style: normal;
 			font-weight: 400;
 			font-size: 4vmin;
+			margin-bottom: 1vmin;
 	 }
 
 	 & p {

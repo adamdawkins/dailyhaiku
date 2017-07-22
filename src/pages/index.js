@@ -3,14 +3,11 @@ import Helmet from "react-helmet"
 import Haiku from '../components/Haiku';
 
 export default class Index extends React.Component {
-	 constructor(props) {
-			super(props);
-			window.location = props.data.allMarkdownRemark.haikus[0].haiku.frontmatter.path;
-	 }
   render() {
-    return (
+		const { path, date } = this.props.data.allMarkdownRemark.haikus[0].haiku.frontmatter;
+		return (
 			<Haiku 
-				html="<p>Finding the most recent Haiku...</p>"
+				html={`<p>Latest haiku:<br/> <a href="${path}">${date}</a></p>`}
 			/>
     )
   }
@@ -23,6 +20,7 @@ query allHaikus {
 			haiku:node {
 				frontmatter {
 					path
+					date(formatString:"Do MMMM, YYYY")
 				}
 			}
 		}
