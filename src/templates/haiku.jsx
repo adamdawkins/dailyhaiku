@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Haiku from '../components/Haiku';
 import Helmet from 'react-helmet';
-import logo from './logo.png';
+import logo from '../logo.png';
 
 const HaikuTemplate = ({data: { haiku }, pathContext }) => { 
 	const { next, previous, path } = pathContext;

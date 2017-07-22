@@ -1,6 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Typekit from 'react-typekit'
+import appleTouchIcon from './apple-touch-icon.png'
+import favicon32x32 from './favicon-32x32.png'
+import favicon16x16 from "./favicon-16x16.png"
+import manifest from "./manifest.json"
 
 const BUILD_TIME = new Date().getTime()
 
@@ -40,6 +44,11 @@ export default class HTML extends React.Component {
 						/>
 						<Typekit kitId="vha4dvp" />
           {this.props.headComponents}
+					<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}/>
+					<link rel="icon" type="image/png" sizes="32x32" href={ favicon32x32 }/>
+					<link rel="icon" type="image/png" sizes="16x16" href={ favicon16x16}/>
+					<link rel="manifest" href={manifest}/>
+					<meta name="theme-color" content="#ffffff"/ >
           {css}
         </head>
         <body>
