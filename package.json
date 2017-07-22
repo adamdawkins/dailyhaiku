@@ -2,6 +2,10 @@
   "name": "adams-haikus",
   "description": "Adam's Daily Haikus",
   "version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adamdawkinsdailyhaiku/.git"
+	},
   "author": "Adam Dawkins <adam@dragondrop.uk>",
   "dependencies": {
     "gatsby": "^1.0.1",
