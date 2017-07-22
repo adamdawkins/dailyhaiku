@@ -23,7 +23,7 @@ export default class HTML extends React.Component {
 			tracking = (
 				<div
 					dangerouslySetInnerHTML={{
-						__html: require("!raw!../public/static/clicky.html"),
+						__html: require("!raw!./clicky.html"),
 					}}
 				/>
 			)
