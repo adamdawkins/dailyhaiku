@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Haiku from '../components/Haiku';
 import Helmet from 'react-helmet';
+import logo from './logo.png';
 
 const HaikuTemplate = ({data: { haiku }, pathContext }) => { 
 	const { next, previous, path } = pathContext;
@@ -10,6 +11,8 @@ const HaikuTemplate = ({data: { haiku }, pathContext }) => {
 			<Helmet>
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:creator" content="@adamdawkins" />
+				<meta name="twitter:image" content={logo}/>
+				<meta name="twitter:image:alt" content="俳句"/>
 				<meta property="og:url" content={`https://adamshaikus.now.sh/${path}`} />
 				<meta property="og:title" content={`${haiku.frontmatter.date} - A haiku.`} />
 				<meta property="og:description" content={haiku.internal.content.split('---')[2].split('\n\n')[1]}/>
