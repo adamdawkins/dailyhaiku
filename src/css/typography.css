@@ -648,7 +648,7 @@ a {
 	 flex-direction: column;
 	 justify-content: center;
 	 box-sizing: border-box;
-	 height: calc(100vh - 4rem - 2rem);
+	 height: 80vh;
 
 	 & .date {
 			color: rgba(0,0,0, .8);
