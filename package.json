@@ -27,6 +27,7 @@
     "deploy": "rm -rf public/*.html && gatsby build && now public",
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"pages/*.js\" \"utils/*.js\" \"wrappers/*.js\" \"html.js\"",
+		"changelog": "$(yarn bin)/changelog",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
