@@ -23,6 +23,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
+		"start": "npm run develop",
     "build": "gatsby build",
     "deploy": "rm -rf public/*.html && gatsby build && now public",
     "develop": "gatsby develop",
